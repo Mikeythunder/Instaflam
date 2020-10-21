@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -18,22 +17,32 @@
 
     <Button
         android:id="@+id/btnCaptureImage"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnSubmit"
+        android:layout_alignParentStart="false"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="-8dp"
         android:text="Take Picture" />
 
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ivPosterImage"
+        android:layout_marginTop="0dp"
         android:ems="10"
         android:hint="Description..." />
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/etDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="70dp"
         android:text="Post" />
 
 
-</LinearLayout>
+</RelativeLayout>

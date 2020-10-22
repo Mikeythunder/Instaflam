@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSubmit;
     private Button btnCaptureImage;
     private ImageView ivPostImage;
+    private Button btnLogout;
 
     //Need to include a field for the file to be used when taking the photo
     private File photoFile;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
         btnCaptureImage = findViewById(R.id.btnCaptureImage);
         ivPostImage = findViewById(R.id.ivPosterImage);
-
+        btnLogout = findViewById(R.id.btnLogout);
 
 //        queryPosts();
 
@@ -62,6 +63,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 launchCamera();
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser.logOut();
+                Toast.makeText(MainActivity.this, "Successfully logged out!", Toast.LENGTH_SHORT).show();
+                logOut();
             }
         });
         //Now need to set an onClick listener to make the submit button work
@@ -88,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     //THE CODE BELOW IS TAKEN FROM THE GUDIE: https://guides.codepath.org/android/Accessing-the-Camera-and-Stored-Media
         //USE THE Using Capture Intent section
         //Need to import and add some variables
@@ -109,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
             // Start the image capture intent to take photo
             startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
         }
+    }
+
+    private void logOut(){
+        Intent i =  new Intent(this, LoginActivity.class);
+        startActivity(i);
     }
 
     @Override

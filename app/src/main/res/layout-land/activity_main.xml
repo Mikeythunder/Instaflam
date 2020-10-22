@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivPosterImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/btnCaptureImage"
+                android:layout_width="421dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="150dp"
+                android:background="#17A1F2"
+                android:text="Take  Picture" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="651dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:ems="10"
+                android:hint="Description..." />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="421dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:background="#81D921"
+                android:text="Post Content" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="421dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:text="Logout" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

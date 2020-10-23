@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(ParseException e) {
+
+                
                 if(username.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Username Field Required!", Toast.LENGTH_LONG).show();
                     return;
